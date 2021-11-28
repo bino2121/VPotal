@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'application#goodbye'
+  get '/' => 'home#top'
+  #root 'application#goodbye'
 end
