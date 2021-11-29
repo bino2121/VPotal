@@ -1,2 +1,4 @@
-<textarea name = "text"></textarea>
-<input type = "button" value = "送信">
+<%=form_tag("/posts/create",method: :post) do%>
+  <textarea name = "text"></textarea>
+  <input type = "submit" value = "送信">
+<%end%>
