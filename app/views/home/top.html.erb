@@ -11,10 +11,10 @@
     </ul>
   </div>
   <div class ="timrline">
-    <%=@users.each do |user|%>
-    <ul>
-      <li>つぶやきの取得公開</li>
-    </ul>
+    <%@posts.each do |post|%>
+      <ul>
+        <li><%=post.content%></li>
+      </ul>
     <%end%>
   </div>
   <div class = "menu">
