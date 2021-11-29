@@ -1,0 +1,7 @@
+  <div class ="timrline">
+    <%@posts.each do |post|%>
+      <ul>
+        <li><%=link_to(post.content,"/posts/#{post.id}")%></li>
+      </ul>
+    <%end%>
+  </div>
