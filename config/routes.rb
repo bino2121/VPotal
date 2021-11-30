@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/posts/:id' => "posts#show"
   post 'posts/create' => "posts#create"
   get "/users/new" => "users#new"
-  get "/users/login" => "users#login"
+  get "/users/login" => "users#login_form"
   post "/users/login" => "users#login"
   post "/users/create" => "users#create"
   get '/' => 'home#top'
