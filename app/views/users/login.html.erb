@@ -1,3 +1,7 @@
+<%=form_tag("/users/login",method: :post)do%>
 <p>ユーザー名</p>
 <input name ="name">
 <p>パスワード</p>
+<input name = password type = "password">
+<input type = "submit" value ="ログイン">
+<%end%>

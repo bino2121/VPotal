@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post 'posts/create' => "posts#create"
   get "/users/new" => "users#new"
   get "/users/login" => "users#login"
+  post "/users/login" => "users#login"
   post "/users/create" => "users#create"
   get '/' => 'home#top'
   #root 'application#goodbye'
