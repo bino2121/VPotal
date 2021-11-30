@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     
   end
   def create
-    @post = Post.new(content: params[:text])
+    @post = Post.new(content: params[:text],user_id: session[:user_id])
     if @post.save
       redirect_to("/posts/index")
     else
