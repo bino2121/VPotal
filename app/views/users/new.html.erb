@@ -1,6 +1,3 @@
-<%@user.errors.full_messages.each do |message|%>
-　　<%=message%>
-<%end%>
 <%=form_tag("/users/create",method: :post) do%>
 <p>ユーザーネーム</p>
 <input name = "name">
