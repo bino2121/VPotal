@@ -1,0 +1,9 @@
+<p>ユーザー画像</p>
+<%=link_to("#{@user.name}","/users/#{@user.id}")%>
+<p>ユーザープロフィール</p>
+<p>関連サイト</p>
+<%@posts.each do |post|%>
+    <ul>
+      <li><%=link_to(post.content,"/posts/#{post.id}")%></li>
+    </ul>
+<%end%>

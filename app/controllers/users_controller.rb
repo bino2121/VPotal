@@ -11,6 +11,11 @@ class UsersController < ApplicationController
       render("users/new")
     end
   end
+  def show
+    
+    @user = User.find_by(id: params[:id])
+    @posts = Post.where(user_id: @user.id) 
+  end
   def login_form
     
   end
@@ -28,4 +33,5 @@ class UsersController < ApplicationController
     session[:user_id] = nil
     redirect_to("/")
   end
+  
 end
