@@ -10,6 +10,9 @@
   </head>
 
   <body>
+    <div class = "header">
+      <h1><%=link_to("VPotal","/")%></h1>
+    </div>
     <p><%="ログインユーザー#{session[:user_id]}"%></p>
     <%= yield %>
   </body>
