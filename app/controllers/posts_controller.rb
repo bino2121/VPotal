@@ -21,4 +21,13 @@ class PostsController < ApplicationController
   def user_post
     #@post = Post.find_by(user_id: params[:user_id])
   end
+  def destroy
+    @post = Post.find_by(id: params[:id])
+    if (@post.destroy)
+      flash[:notice] = "削除しました"
+      redirect_to("/")
+    else
+      render("posts/show")
+    end
+  end
 end
