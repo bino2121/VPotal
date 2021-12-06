@@ -12,7 +12,6 @@ class UsersController < ApplicationController
     end
   end
   def show
-    
     @user = User.find_by(id: params[:id])
     @posts = Post.where(user_id: @user.id) 
   end
@@ -20,7 +19,8 @@ class UsersController < ApplicationController
     
   end
   def login
-    if @user = User.find_by(name: params[:name],password: params[:password])
+    @user = User.find_by(name: params[:name])
+    if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect_to("/")
       flash[:notice] = "ログインしました"
