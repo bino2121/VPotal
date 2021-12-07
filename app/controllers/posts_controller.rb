@@ -8,7 +8,10 @@ class PostsController < ApplicationController
     @user = User.find_by(id: @post.user_id)
   end
   def new
-    
+    if @login_user == nil
+      flash[:notice] = "ログインしてください"
+      redirect_to("/users/login")
+    end
   end
   def create
     @post = Post.new(content: params[:text],user_id: session[:user_id])
